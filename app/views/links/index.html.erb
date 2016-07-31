@@ -1,0 +1,16 @@
+<h1>Links#index</h1>
+
+<table>
+  <tbody>
+    <% @links.each do |link| %>
+    <tr>
+      <td>
+        <%= link.name %>
+      </td>
+    </tr>
+    <td>
+      <%= link.url %>
+    </td>
+    <% end %>
+  </tbody>
+</table>
