@@ -5,12 +5,14 @@
     <% @links.each do |link| %>
     <tr>
       <td>
-        <%= link.name %>
+        <%= link_to "#{link.name}",link_path(id: link.id) %>
       </td>
     </tr>
-    <td>
-      <%= link.url %>
-    </td>
+  
     <% end %>
   </tbody>
 </table>
+
+<%= link_to "sign up", new_user_path %>
+
+<%= link_to "log in", new_session_path %>

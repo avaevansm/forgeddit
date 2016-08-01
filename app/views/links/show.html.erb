@@ -1,3 +1,19 @@
 <h1>Links#show</h1>
-<%= @link.name %>
-<%= @link.url %>
+
+<table>
+  <table>
+    <tr>
+      <td>
+        <%= @link.name %>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= @link.url %>
+      </td>
+    </tr>
+  </table>
+</table>
+
+
+<%= link_to "#{link.name}",link_path(id: link.id) %>

@@ -14,10 +14,17 @@ class LinksController < ApplicationController
 
   def create
     @link = Link.create(link_params)
+
     redirect_to "/links#index"
   end
 
   def edit
+  end
+
+  def delete
+    @link = Link.find(params["id"])
+    @link.destroy
+    redirect_to "/links#index"
   end
 
 
